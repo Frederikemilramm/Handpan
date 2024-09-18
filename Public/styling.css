@@ -1,0 +1,268 @@
+/* Import Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Montserrat:wght@300;600&display=swap');
+
+/* General Styling */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Montserrat', sans-serif;
+    color: #333;
+    background-color: #fff;
+}
+
+/* Header */
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 50px;  /* Adjusted for more space */
+    background-color: transparent;
+    position: absolute;
+    top: 0;
+    width: 100%;
+    z-index: 1000;
+}
+
+.logo img {
+    width: 150px;
+    margin-left: 20px; /* Reposition the logo */
+}
+
+.menu-icon {
+    font-size: 36px;
+    cursor: pointer;
+    color: #333;
+}
+
+/* Full-Screen Navigation Overlay */
+.nav-overlay {
+    height: 100%;
+    width: 0;
+    position: fixed;
+    z-index: 9999;
+    top: 0;
+    left: 0;
+    background-color: rgba(255, 255, 255, 0.95);
+    overflow-x: hidden;
+    transition: 0.5s;
+}
+
+.nav-overlay-content {
+    position: absolute;
+    top: 50%;
+    width: 100%;
+    text-align: center;
+    transform: translateY(-50%);
+}
+
+.nav-overlay-content a {
+    padding: 10px;
+    text-decoration: none;
+    font-size: 36px;
+    color: #333;
+    display: block;
+    transition: 0.3s;
+}
+
+.nav-overlay-content a:hover {
+    color: #fbbf24;
+}
+
+.closebtn {
+    position: absolute;
+    top: 20px;
+    right: 45px;
+    font-size: 60px;
+    color: #333;
+}
+
+/* Hero Section */
+.hero {
+    background-image: url('HandpanCopenhagen_R.jpg');
+    background-size: cover;
+    background-position: center;
+    height: 110vh;
+    position: relative;
+}
+
+.hero-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(255, 255, 255, 0.7);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    text-align: center;
+}
+
+.hero h1 {
+    font-family: 'Playfair Display', serif;
+    font-size: 64px;
+    color: #333;
+    margin-bottom: 20px;
+    text-transform: uppercase;
+    opacity: 0;
+    animation: fadeIn 1.5s ease-in-out forwards;
+}
+
+.hero p {
+    font-size: 24px;
+    color: #666;
+    margin-bottom: 30px;
+    opacity: 0;
+    animation: fadeInDelayed 2s ease-in-out forwards;
+}
+
+/* New Button Design */
+.btn-gradient {
+    background-image: linear-gradient(135deg, #fbbf24 0%, #333 100%);
+    padding: 15px 40px;
+    color: #fff;
+    text-decoration: none;
+    border-radius: 50px;
+    font-weight: bold;
+    font-size: 18px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+    transition: transform 0.3s ease, background-position 0.4s ease-in-out;
+    background-size: 200% 200%;
+    opacity: 0;
+    animation: slideUp 2.5s ease-in-out forwards;
+}
+
+.btn-gradient:hover {
+    transform: scale(1.05);
+    background-position: right center;
+}
+
+/* Animations */
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+@keyframes fadeInDelayed {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+@keyframes slideUp {
+    from { opacity: 0; transform: translateY(20px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+/* Workshops Section */
+.section {
+    padding: 80px 20px;
+    background-color: #f9f9f9;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+h2 {
+    font-family: 'Playfair Display', serif;
+    font-size: 48px;
+    color: #333;
+    margin-bottom: 40px;
+}
+
+p {
+    font-size: 18px;
+    color: #666;
+    margin-bottom: 50px;
+}
+
+/* Parallax Section */
+.parallax-section {
+    background-image: url('Koné_bewerkt-42.jpg');
+    background-size: cover;
+    background-attachment: fixed;
+    background-position: center;
+    height: 60vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.parallax-content h2 {
+    font-family: 'Playfair Display', serif;
+    font-size: 36px;
+    color: #fff;
+    text-align: center;
+    background-color: rgba(0, 0, 0, 0.6);
+    padding: 20px 40px;
+}
+
+/* Footer */
+footer {
+    background-color: #f4f4f4;
+    padding: 60px 0;
+    color: #333;
+}
+
+.footer-top {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px 0;
+    border-bottom: 1px solid #ddd;
+}
+
+.footer-logo img {
+    width: 150px;
+}
+
+.footer-links {
+    display: flex;
+    justify-content: space-between;
+    width: 50%;
+}
+
+.footer-links a {
+    color: #333;
+    text-decoration: none;
+    font-size: 18px;
+    transition: color 0.3s;
+}
+
+.footer-links a:hover {
+    color: #fbbf24;
+}
+
+/* Footer Social and Bottom Section */
+.footer-bottom {
+    text-align: center;
+    padding: 20px 0;
+}
+
+.footer-social a {
+    margin: 0 10px;
+    display: inline-block;
+}
+
+.footer-social img {
+    width: 30px;
+    transition: transform 0.3s;
+}
+
+.footer-social a:hover img {
+    transform: scale(1.1);
+}
+
+footer p {
+    font-size: 16px;
+    color: #666;
+}

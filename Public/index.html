@@ -3,58 +3,90 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Ski School Guidance</title>
-    <link rel="stylesheet" href="styles.css">
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;600&display=swap" rel="stylesheet">
+    <meta name="description" content="Handpan Copenhagen - A place to explore the unique world of handpan music, workshops, and events.">
+    <title>Handpan Copenhagen</title>
+    <link rel="stylesheet" href="styling.css">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Montserrat:wght@300;600&display=swap" rel="stylesheet">
 </head>
 <body>
+
+    <!-- Full-Screen Navigation -->
+    <div id="nav-overlay" class="nav-overlay">
+        <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+        <div class="nav-overlay-content">
+            <a href="#workshops">Workshops</a>
+            <a href="#events">Events</a>
+            <a href="#private-lessons">Private Lessons</a>
+            <a href="#rental">Rental</a>
+            <a href="#about-us">About Us</a>
+        </div>
+    </div>
+
+    <!-- Header with Logo and Menu Icon -->
     <header>
-        <div class="logo">Ski School Guidance</div>
-        <nav>
-            <ul>
-                <li><a href="#home">Home</a></li>
-                <li><a href="schools.html">Schools</a>
-                <li><a href="about.html">About</a></li>
-            </ul>
-        </nav>
+        </div>
+        <span class="menu-icon" onclick="openNav()">&#9776;</span>
     </header>
 
-    <section id="home" class="hero">
-        <video autoplay muted loop id="bg-video">
-            <source src="190404_04_KaninBovec_Drone_003.mp4" type="video/mp4">
-            Your browser does not support the video tag.
-        </video>
-        <div class="hero-content">
-            <h1>Find Your Perfect Ski School</h1>
-            <p>Your journey to mastering the slopes begins here.</p>
-            <a href="schools.html" class="btn">Discover Schools</a>
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="hero-overlay">
+            <div class="hero-content">
+                <h1 class="fade-in">Welcome to Handpan Copenhagen</h1>
+                <p class="fade-in-delayed">Discover the world of handpan music</p>
+                <a href="#workshops" class="btn btn-gradient">Explore Workshops</a>
+            </div>
         </div>
-        <div class="scroll-indicator">
-            <span>Scroll Down</span>
-            <div class="scroll-arrow"></div>
-        </div> 
     </section>
 
-    <section id="contact" class="contact">
-        <h2>Contact Us</h2>
-        <form id="contactForm">
-            <label for="name">Name:</label>
-            <input type="text" id="name" name="name" required>
-            
-            <label for="email">Email:</label>
-            <input type="email" id="email" name="email" required>
-            
-            <label for="message">Message:</label>
-            <textarea id="message" name="message" required></textarea>
-            
-            <button type="submit" class="btn">Submit</button>
-        </form>
-        <div id="formMessage" style="display: none;"></div> <!-- Feedback message -->
+    <!-- Workshops Section -->
+    <section id="workshops" class="section workshops">
+        <div class="container">
+            <h2>Workshops</h2>
+            <p>Immerse yourself in the art of handpan through our expertly crafted workshops.</p>
+            <div class="workshop-grid">
+                <div class="workshop-item">
+                    <h3>Beginner's Workshop</h3>
+                    <p>Get started with handpan basics in our introductory sessions.</p>
+                </div>
+                <div class="workshop-item">
+                    <h3>Advanced Workshop</h3>
+                    <p>Take your skills to the next level with advanced techniques and practices.</p>
+                </div>
+            </div>
+        </div>
     </section>
-    
 
+    <!-- Parallax Section -->
+    <section class="parallax-section">
+        <div class="parallax-content">
+            <h2>"The beauty of handpan lies in the journey of sound."</h2>
+        </div>
+    </section>
+
+    <!-- Footer -->
     <footer>
-        <p>&copy; 2024 Ski School Guidance. All rights reserved.</p>
+        <div class="footer-top">
+            <div class="footer-logo">
+                <img src="HandpanCopenhagen.jpg" alt="Handpan Copenhagen Logo">
+            </div>
+            <div class="footer-links">
+                <a href="#workshops">Workshops</a>
+                <a href="#events">Events</a>
+                <a href="#private-lessons">Private Lessons</a>
+                <a href="#rental">Rental</a>
+                <a href="#about-us">About Us</a>
+            </div>
+        </div>
+
+        <div class="footer-bottom">
+            <div class="footer-social">
+                <a href="#"><img src="facebook-icon.png" alt="Facebook"></a>
+                <a href="#"><img src="instagram-icon.png" alt="Instagram"></a>
+                <a href="#"><img src="youtube-icon.png" alt="YouTube"></a>
+            </div>
+            <p>&copy; 2024 Handpan Copenhagen. All rights reserved.</p>
+        </div>
     </footer>
 
     <script src="script.js"></script>
